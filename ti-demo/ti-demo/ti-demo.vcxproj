@@ -161,6 +161,7 @@
     <ClCompile Include="..\..\..\w32oop\System\Registry.cpp" />
     <ClCompile Include="..\..\..\w32oop\System\Service.cpp" />
     <ClCompile Include="ti-demo.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\w32oop\Core\publicdef.hpp" />

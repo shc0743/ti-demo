@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Users\\shc07\\Code\\git\\github.com\\shc0743\\ti-demo\\ti-demo\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DCAFC3F5-DBD9-4ED2-93AC-5C6E4C05A3EE}|ti-demo\\ti-demo.vcxproj|E:\\Users\\shc07\\Code\\git\\github.com\\shc0743\\ti-demo\\ti-demo\\ti-demo\\ti-demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DCAFC3F5-DBD9-4ED2-93AC-5C6E4C05A3EE}|ti-demo\\ti-demo.vcxproj|solutionrelative:ti-demo\\ti-demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ti-demo.cpp",
-              "DocumentMoniker": "E:\\Users\\shc07\\Code\\git\\github.com\\shc0743\\ti-demo\\ti-demo\\ti-demo\\ti-demo.cpp",
-              "RelativeDocumentMoniker": "ti-demo\\ti-demo.cpp",
-              "ToolTip": "E:\\Users\\shc07\\Code\\git\\github.com\\shc0743\\ti-demo\\ti-demo\\ti-demo\\ti-demo.cpp",
-              "RelativeToolTip": "ti-demo\\ti-demo.cpp",
-              "ViewState": "AgIAAAMBAAAAAAAAAAD4vxcBAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-08-14T02:31:17.991Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

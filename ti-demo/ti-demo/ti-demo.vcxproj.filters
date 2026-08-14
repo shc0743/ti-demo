@@ -42,6 +42,9 @@
     <ClCompile Include="..\..\..\w32oop\System\Service.cpp">
       <Filter>w32oop</Filter>
     </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\w32oop\Core\publicdef.hpp">
