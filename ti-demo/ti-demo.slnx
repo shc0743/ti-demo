@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ti-demo/ti-demo.vcxproj" Id="dcafc3f5-dbd9-4ed2-93ac-5c6e4c05a3ee" />
+</Solution>
