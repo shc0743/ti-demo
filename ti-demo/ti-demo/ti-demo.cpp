@@ -14,12 +14,13 @@ using namespace std;
 wstring util_提取命令行(int argc, WCHAR** argv, int start);
 bool util_是否是SYSTEM();
 BOOL util_打开所有特权(HANDLE hToken = NULL);
+inline int util_失败返回() { DWORD e = GetLastError(); if (e) return e; return 1; }
 int ui();
 int 一阶段(int argc, WCHAR** argv);
 int 二阶段(int argc, WCHAR** argv);
 int 三阶段(int argc, WCHAR** argv);
 
-#define MYFAIL return GetLastError() || 1
+#define MYFAIL return util_失败返回()
 
 
 int WINAPI wWinMain(
