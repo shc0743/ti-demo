@@ -3,7 +3,7 @@
 #include <shlobj.h>
 #include <ShObjIdl.h>
 #include <Shlwapi.h>
-#include "../../../w32oop/w32use.hpp"
+#include "../../w32oop/w32use.hpp"
 #pragma comment(lib, "comctl32.lib")
 #pragma comment(linker,"\"/manifestdependency:type='win32' \
 name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \

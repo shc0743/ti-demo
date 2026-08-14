@@ -1,7 +1,7 @@
 ﻿#include <Windows.h>
 #include <sddl.h>
 #include <string>
-#include "../../../w32oop/w32use.hpp"
+#include "../../w32oop/w32use.hpp"
 using namespace std;
 
 
