@@ -51,12 +51,18 @@ int WINAPI wWinMain(
 
 // 功能：显示UI，询问用户要运行的内容
 int ui() {
+	u:
 	InputDialog command(L"请输入文本", 500);
 	command.create();
 	command.setAcceptButtonText(L"运行");
 	command.setRejectButtonText(L"取消");
 	auto input = command.getInput<wstring>(L"输入要运行的程序命令行。");
 	if (input.has_value()) {
+		if (input.value().empty()) {
+			MessageBoxW(NULL, L"空的输入！", NULL, MB_ICONERROR);
+			goto u;
+		}
+		run:
 		STARTUPINFOW si{ sizeof(si) };PROCESS_INFORMATION pi{};
 		auto app = make_unique<WCHAR[]>(32768);
 		auto cmd = make_unique<WCHAR[]>(32768);
@@ -73,6 +79,12 @@ int ui() {
 		WaitForSingleObject(pi.hProcess, INFINITE);
 		GetExitCodeProcess(pi.hProcess, &code);
 		CloseHandle(pi.hProcess);
+		// UI进程：显示错误信息（如果有错误）
+		if (code != 0) {
+			int p = 0;
+			TaskDialog(NULL, NULL, L"运行失败", format(L"运行结果：进程以代码 {} 退出。", code).c_str(), ErrorChecker(code).message().c_str(), TDCBF_CANCEL_BUTTON | TDCBF_RETRY_BUTTON, TD_ERROR_ICON, &p);
+			if (p == IDRETRY) goto run;
+		}
 		return (int)code;
 	}
 	return 0;
@@ -89,7 +101,7 @@ int 一阶段(int argc, WCHAR** argv) {
 	si.lpParameters = params.c_str();
 	si.lpVerb = L"runas";
 	si.nShow = SW_SHOWDEFAULT;
-	si.fMask = SEE_MASK_NOCLOSEPROCESS;
+	si.fMask = SEE_MASK_NOCLOSEPROCESS | SEE_MASK_NOASYNC;
 	if (!ShellExecuteExW(&si) || !si.hProcess) MYFAIL;
 	DWORD code{};
 	WaitForSingleObject(si.hProcess, INFINITE);
