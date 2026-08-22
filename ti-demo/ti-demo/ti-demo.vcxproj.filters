@@ -37,4 +37,9 @@
       <Filter>w32oop</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Application.manifest">
+      <Filter>资源文件</Filter>
+    </Manifest>
+  </ItemGroup>
 </Project>
